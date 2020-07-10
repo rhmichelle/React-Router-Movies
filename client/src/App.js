@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 import SavedList from './Movies/SavedList';
 
 const App = () => {
@@ -13,6 +12,7 @@ const App = () => {
         .get('http://localhost:5000/api/movies')
         .then(response => {
           setMovieList(response.data);
+          // console.log(movieList);
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -28,7 +28,8 @@ const App = () => {
   return (
     <div>
       <SavedList list={savedList} />
-      <div>Replace this Div with your Routes</div>
+      <div>
+      </div>
     </div>
   );
 };
