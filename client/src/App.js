@@ -40,9 +40,7 @@ const App = () => {
       <Route path='/'>
           <MovieList movies={movieList} />
       </Route>
-      <Route path='/movies/:id'>
-        <Movie />
-      </Route>
+      <Route path='/movies/:id' component={Movie} />
     </div>
   );
 };
