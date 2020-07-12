@@ -16,7 +16,7 @@ const App = () => {
         .then(response => {
           setMovieList(response.data);
           const listOfMovies = response;
-          console.log("Movies", listOfMovies);
+          // console.log("Movies", listOfMovies);
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -36,11 +36,10 @@ const App = () => {
   return (
     <div>
       {/* <SavedList list={savedList} /> */}
-
+      <Route path='/movies/1' component={Movie} />
       <Route path='/'>
           <MovieList movies={movieList} />
       </Route>
-      <Route path='/movies/:id' component={Movie} />
     </div>
   );
 };
