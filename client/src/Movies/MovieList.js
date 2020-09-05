@@ -3,9 +3,9 @@ import React from 'react';
 const MovieList = props => {
   return (
     <div className="movie-list">
-      {props.movies.map(movie => (
+      {/* {props.movies.map(movie => (
         <MovieDetails key={movie.id} movie={movie} />
-      ))}
+      ))} */}
     </div>
   );
 }
@@ -23,11 +23,11 @@ function MovieDetails({ movie }) {
       </div>
       <h3>Actors</h3>
 
-      {stars.map(star => (
+      {/* {stars.map(star => (
         <div key={star} className="movie-star">
           {star}
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }
