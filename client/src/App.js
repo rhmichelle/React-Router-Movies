@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
@@ -32,8 +32,10 @@ const App = () => {
   return (
       <div>
         <SavedList list={savedList} />
-        <Route path='/' render={() => <MovieList movies={movieList}/>} />
-        <Route path='/movies/1' component={Movie} />
+        <Switch>
+          <Route path='/movies/:id' render={() => <Movie />} />
+          <Route path='/' render={() => <MovieList movies={movieList}/>} />
+        </Switch>
       </div>
     );
 };
@@ -57,3 +59,6 @@ export default App;
 // <Link> gets activated (Order is called in and placed)
 // React? reads to='/' (React cookery magic)
 // <Route> delivers component assigned to '/' (Delivery driver)
+
+// <Route path='/' component={Home} /> Is not able to pass props
+// <Route path='/' render={() => <HomeComponent appliance={appliance}} /> Is able to pass props

@@ -13,6 +13,7 @@ const Movie = (props) => {
         .get(`http://localhost:5000/api/movies/${id}`)
         .then(response => {
           setMovie(response.data);
+          console.log('Response', response.data)
         })
         .catch(error => {
           console.error(error);
