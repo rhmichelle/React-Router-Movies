@@ -32,7 +32,7 @@ const App = () => {
   return (
       <div>
         <SavedList list={savedList} />
-        <Route path='/' component={MovieList}/>
+        <Route path='/' render={() => <MovieList movies={movieList}/>} />
         <Route path='/movies/1' component={Movie} />
       </div>
     );
