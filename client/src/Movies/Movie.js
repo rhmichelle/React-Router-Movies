@@ -4,12 +4,14 @@ import { useParams } from 'react-router-dom';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
-  // const params = useParams();
-  // console.log('Params', params);
+  const params = useParams();
+  console.log('Params', params);
   // console.log('Props', props);
+  const id = params.id;
+  // console.log(paramItemID)
  
   useEffect(() => {
-    const id = 1;
+    // const id = 2;
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
