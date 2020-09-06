@@ -33,8 +33,11 @@ const App = () => {
       <div>
         <SavedList list={savedList} />
         <Switch>
-          {/* <Route path='/movies/:id'><Movie /></Route> */}
-          <Route path='/movies/:id' render={() => <Movie />} />
+          {/* Below, we are rendering the Movie component. MovieList has the card so all we need from Movie is the ID / :id */}
+          <Route path='/movies/:id'>
+            <Movie />
+          </Route>
+          
           <Route path='/' render={() => <MovieList movies={movieList}/>} />
         </Switch>
       </div>

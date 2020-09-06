@@ -14,7 +14,7 @@ const MovieList = props => {
   );
 }
 
-
+// MovieList render
 function MovieDetails({ movie }) {
   const { title, director, metascore, stars } = movie;
   return (
