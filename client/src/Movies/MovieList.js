@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const MovieList = props => {
   //***** Ask Question Here:
   // Why does console.log(props) run twice? Once it doesn't bring anything second time it brings the array **********//
-  console.log('Props', props)
+  // console.log('Props', props)
   return (
     <div className="movie-list">
       {props.movies.map(movie => (
